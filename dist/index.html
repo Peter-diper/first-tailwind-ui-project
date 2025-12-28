@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>postcss Taillwind</title>
+  </head>
+  <body>
+    <header>
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ul class="p-2">
+          <div class="flex items-center">
+            <!-- mobile menu taggle -->
+            <button class="rounded-md bg-white p-2 text-gray-400 lg:hidden">
+              <span class="sr-only">open moudal</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+            <!-- LOGO -->
+            <div class="ml-4 lg:ml-0">
+              <a href="#">
+                <img
+                  class="size-[40px]"
+                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="our Company"
+                />
+              </a>
+            </div>
+            <!--  Mian menu-->
+            <div class="ml-4 hidden h-full gap-x-8 lg:flex">
+              <a
+                href="#"
+                class="texgra700 text-sm font-medium text-gray-700 hover:text-gray-800"
+                >Men</a
+              >
+              <a
+                href="#"
+                class="texgra700 text-sm font-medium text-gray-700 hover:text-gray-800"
+                >Women</a
+              >
+              <a
+                href="#"
+                class="texgra700 text-sm font-medium text-gray-700 hover:text-gray-800"
+                >Company</a
+              >
+              <a
+                href="#"
+                class="texgra700 text-sm font-medium text-gray-700 hover:text-gray-800"
+                >Stores</a
+              >
+            </div>
+            <!-- Search and account -->
+            <div class="ml-auto flex items-center gap-4 lg:gap-6">
+              <div class="hidden lg:flex lg:items-center lg:gap-6">
+                <a
+                  href="#"
+                  class="text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >sing in</a
+                >
+                <span class="h-6 w-px bg-gray-300"></span>
+                <a
+                  href="#"
+                  class="text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >Create Account</a
+                >
+              </div>
+              <!-- search -->
+              <div class="">
+                <a
+                  href="#"
+                  class="bg-red-300 text-gray-400 hover:text-gray-500"
+                >
+                  <span class="sr-only">Search</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <!-- cart -->
+              <div class="">
+                <a href="" class="group flex items-center p-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-gray-400 group-hover:text-gray-500"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                  <span class="ml-3 text-sm font-medium">0</span>
+                  <span class="sr-only">item cart, viewItems</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
