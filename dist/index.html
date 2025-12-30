@@ -6,8 +6,13 @@
     <link rel="stylesheet" href="./output.css" />
     <title>postcss Taillwind</title>
   </head>
-  <body>
-    <header>
+  <body class="h-screen bg-neutral-100">
+    <header class="relative">
+      <div
+        class="bg-indigo-600 py-2.5 text-center text-sm text-white transition-all lg:text-lg"
+      >
+        Get free delivery on orders over $100
+      </div>
       <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ul class="p-2">
           <div class="flex items-center">
@@ -40,8 +45,101 @@
               </a>
             </div>
             <!--  Mian menu-->
-            <div class="ml-4 hidden h-full gap-x-8 lg:flex">
-              <a
+            <div class="ml-4 hidden h-full gap-x-7 lg:flex">
+              <button
+                id="mega-women"
+                class="grid cursor-pointer text-sm text-gray-600 transition-all hover:border-b-1 hover:border-b-indigo-600 hover:text-indigo-600"
+              >
+                Women
+              </button>
+
+              <!-- mega menu women  -->
+              <div
+                data-id="0"
+                id="mega-menu-women"
+                class="absolute inset-0 top-full mx-auto hidden min-h-105 max-w-7xl justify-between gap-x-8 border-y-2 border-gray-200 px-4 pt-10 text-gray-600 opacity-20 transition-all group-hover:bg-amber-100 hover:text-gray-700 sm:px-6 lg:px-8"
+              >
+                <div class="grid flex-1/2 grid-cols-3 text-sm">
+                  <ul
+                    class="flex cursor-pointer flex-col gap-y-4 hover:text-gray-900"
+                  >
+                    <h3 class="cursor-text font-semibold text-neutral-900">
+                      Clothing
+                    </h3>
+                    <a href="#"><li>Tops</li></a>
+                    <a href="#"><li>Dresses</li></a>
+                    <a href="#"><li>Pants</li></a>
+                    <a href="#"><li>Denim</li></a>
+                    <a href="#"><li>T-Shirts</li></a>
+                    <a href="#"><li>Jackets</li></a>
+                    <a href="#"><li>Activewear</li></a>
+                    <a href="#"><li>Browse</li></a>
+                    <a href="#"><li>All</li></a>
+                  </ul>
+                  <ul
+                    class="flex cursor-pointer flex-col gap-y-4 hover:text-gray-900"
+                  >
+                    <h3 class="cursor-text font-semibold text-neutral-900">
+                      Watches
+                    </h3>
+                    <a href="#"><li>Wallets</li></a>
+                    <a href="#"><li>Bags</li></a>
+                    <a href="#"><li>Denim</li></a>
+                    <a href="#"><li>Sunglasses</li></a>
+                    <a href="#"><li>Hats</li></a>
+                    <a href="#"><li>Belts</li></a>
+                  </ul>
+                  <ul
+                    class="flex cursor-pointer flex-col gap-y-4 hover:text-gray-900"
+                  >
+                    <h3 class="cursor-text font-semibold text-neutral-900">
+                      Brands
+                    </h3>
+                    <a href="#"><li>Full Nelson</li></a>
+                    <a href="#"><li>My Way</li></a>
+                    <a href="#"><li>Re-Denim</li></a>
+                    <a href="#"><li>Counterfeit</li></a>
+                    <a href="#"><li>Significant Other</li></a>
+                  </ul>
+                </div>
+                <!-- image -->
+                <div class="grid flex-1/2 grid-cols-2 gap-x-8">
+                  <div class="">
+                    <img
+                      src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg"
+                      class="aspect-square rounded-2xl"
+                      alt=""
+                    />
+                    <h2 class="mt-6 text-sm font-bold text-gray-800">
+                      New Arrivals
+                    </h2>
+                    <span class="mt-3.5 text-sm font-medium text-gray-500"
+                      >Shop now</span
+                    >
+                  </div>
+
+                  <div class="">
+                    <img
+                      src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg"
+                      class="rounded-2xl"
+                      alt=""
+                    />
+                    <h2 class="mt-6 text-sm font-bold text-gray-800">
+                      Basic Tees
+                    </h2>
+                    <span class="mt-3.5 text-sm font-medium text-gray-500"
+                      >Shop now</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="cursor-pointer text-sm text-gray-600 transition-all hover:border-b-1 hover:border-b-indigo-600 hover:text-indigo-600"
+              >
+                Men
+              </button>
+              <!-- <a
                 href="#"
                 class="texgra700 text-sm font-medium text-gray-700 hover:text-gray-800"
                 >Men</a
@@ -50,7 +148,7 @@
                 href="#"
                 class="texgra700 text-sm font-medium text-gray-700 hover:text-gray-800"
                 >Women</a
-              >
+              > -->
               <a
                 href="#"
                 class="texgra700 text-sm font-medium text-gray-700 hover:text-gray-800"
@@ -63,7 +161,9 @@
               >
             </div>
             <!-- Search and account -->
-            <div class="ml-auto flex items-center gap-4 lg:gap-6">
+            <div
+              class="ml-auto flex items-center gap-4 transition-all lg:gap-6"
+            >
               <div class="hidden lg:flex lg:items-center lg:gap-6">
                 <a
                   href="#"
@@ -126,5 +226,6 @@
         </ul>
       </nav>
     </header>
+    <script src="../src/js/app.js"></script>
   </body>
 </html>
