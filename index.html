@@ -3,12 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
     <title>postcss Taillwind</title>
   </head>
   <body class="h-screen bg-neutral-100">
     <!-- mobile menu -->
-    <section class="z-40"></section>
+    <section class="fixed inset-0 z-40 hidden" id="modal">
+      <span class="sr-only">mobile navigation</span>
+      <!-- overlay -->
+      <div data-id="0" id="overlay" class="fixed inset-0 bg-black/30"></div>
+      <!-- drower -->
+
+      <div
+        id="drower"
+        class="fixed inset-0 -left-full grid w-64 content-start overflow-y-auto rounded-r-3xl bg-white transition-all [scrollbar-width:none] sm:w-90 [&::-webkit-scrollbar]:hidden"
+      >
+        <!--close icon -->
+        <a href="#" id="close-icon" class="w-full p-3 text-gray-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </a>
+        <!-- btns -->
+        <div
+          class="flex items-center justify-center gap-8 border-b border-gray-200"
+        >
+          <button
+            id="women-mobile-menu"
+            class="flex items-center justify-center border-b border-indigo-600 px-7 py-3 text-sm font-medium text-indigo-600 transition-all"
+          >
+            Women
+          </button>
+          <button
+            id="men-mobile-menu"
+            class="flex items-center justify-center px-7 py-3 text-sm font-medium"
+          >
+            Men
+          </button>
+        </div>
+        <!-- menu items -->
+        <div id="women-mobile" class="mt-6 px-4">
+          <div class="grid grid-cols-2 gap-5">
+            <div class="group">
+              <img
+                src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg"
+                alt="artist with brand new cloues"
+                class="mb-2 aspect-square rounded-xl group-hover:opacity-70"
+              />
+              <a href="#" class="text-sm text-gray-800">New Arrivals</a>
+              <p class="text-xs text-gray-700">Shop Now</p>
+            </div>
+            <div class="group">
+              <img
+                src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg"
+                alt="artist with brand new cloues"
+                class="mb-2 aspect-square rounded-xl group-hover:opacity-70"
+              />
+              <a href="#" class="text-gray-700800 text-sm"> Basic Tees</a>
+              <p class="text-xs text-gray-700">Shop Now</p>
+            </div>
+          </div>
+          <!-- links -->
+          <div class="" id="">
+            <h3 class="mt-8 mb-8 font-semibold">Clothing</h3>
+            <ul class="mb-6 flex flex-col gap-5 text-sm text-gray-600">
+              <a href="#">Tops</a>
+              <a href="#">Dresses</a>
+              <a href="#">Pants</a>
+              <a href="#">Denim</a>
+              <a href="#">Sweaters</a>
+              <a href="#">T-Shirts</a>
+              <a href="#">Jackets</a>
+              <a href="#">Activewear</a>
+              <a href="#">Browse All</a>
+            </ul>
+
+            <h3 class="mb-8 font-semibold">Accessories</h3>
+            <ul class="mb-6 flex flex-col gap-5 text-sm text-gray-600">
+              <a href="#">Watches</a>
+              <a href="#">Wallets</a>
+              <a href="#">Bags</a>
+              <a href="#">Sunglasses</a>
+              <a href="#">Hats</a>
+              <a href="#">Belts</a>
+            </ul>
+
+            <h3 class="mb-8 font-semibold">Brands</h3>
+            <ul class="mb-6 flex flex-col gap-5 text-sm text-gray-600">
+              <a href="#">Tops</a>
+              <a href="#">Dresses</a>
+              <a href="#">Pants</a>
+              <a href="#">Denim</a>
+              <a href="#">Sweaters</a>
+            </ul>
+          </div>
+        </div>
+
+        <!--! man section -->
+        <div id="men-mobile" class="mt-6 hidden px-4 transition-all">
+          <div class="grid grid-cols-2 gap-5">
+            <div class="">
+              <img
+                src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg"
+                class="aspect-square rounded-2xl object-center group-hover:opacity-80"
+                alt=""
+              />
+              <a href="#" class="text-sm text-gray-800"> Basic Tees</a>
+              <p class="text-xs text-gray-700">Shop Now</p>
+            </div>
+
+            <div class="">
+              <img
+                src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-02.jpg"
+                class="aspect-square rounded-2xl object-cover object-center group-hover:opacity-80"
+                alt=""
+              />
+              <a href="#" class="text-gray-700800 text-sm"> Basic Tees</a>
+              <p class="text-xs text-gray-700">Shop Now</p>
+            </div>
+          </div>
+          <!-- links -->
+          <div class="" id="">
+            <h3 class="mt-8 mb-8 font-semibold">Clothing</h3>
+            <ul class="mb-6 flex flex-col gap-5 text-sm text-gray-600">
+              <a href="#">Tops</a>
+              <a href="#">Dresses</a>
+              <a href="#">Pants</a>
+              <a href="#">Denim</a>
+              <a href="#">Sweaters</a>
+              <a href="#">T-Shirts</a>
+              <a href="#">Jackets</a>
+              <a href="#">Activewear</a>
+              <a href="#">Browse All</a>
+            </ul>
+
+            <h3 class="mb-8 font-semibold">Accessories</h3>
+            <ul class="mb-6 flex flex-col gap-5 text-sm text-gray-600">
+              <a href="#">Watches</a>
+              <a href="#">Wallets</a>
+              <a href="#">Bags</a>
+              <a href="#">Sunglasses</a>
+              <a href="#">Hats</a>
+              <a href="#">Belts</a>
+            </ul>
+
+            <h3 class="mb-8 font-semibold">Brands</h3>
+            <ul class="mb-6 flex flex-col gap-5 text-sm text-gray-600">
+              <a href="#">Tops</a>
+              <a href="#">Dresses</a>
+              <a href="#">Pants</a>
+              <a href="#">Denim</a>
+              <a href="#">Sweaters</a>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-center gap-2 border-y border-gray-200 px-4 py-6 text-gray-700"
+        >
+          <a href="#">Company</a>
+          <a href="#">Stores</a>
+        </div>
+        <div
+          class="flex flex-col justify-center gap-2 border-y border-gray-200 px-4 py-6 text-gray-700"
+        >
+          <a href="#">Sign in</a>
+          <a href="#">Create account</a>
+        </div>
+      </div>
+    </section>
 
     <header class="relative">
       <div
@@ -24,20 +197,22 @@
             <!-- mobile menu taggle -->
             <button class="rounded-md bg-white p-2 text-gray-400 lg:hidden">
               <span class="sr-only">open moudal</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
+              <a href="#" id="drowerOpenBtn" aria-checked="false">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </a>
             </button>
             <!-- LOGO -->
             <div class="ml-4 lg:ml-0">
@@ -289,7 +464,7 @@
               </div>
               <!-- cart -->
               <div class="">
-                <a href="" class="group flex items-center p-2">
+                <a href="#" class="group flex items-center p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
